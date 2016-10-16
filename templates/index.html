@@ -14,69 +14,16 @@
                 <a class="navbar-brand"><i class="glyphicon glyphicon-bullhorn"></i> Pyddit</a>
             </div>
         </nav>
-        <div class="container">
+        <div class="container" id="app">
             <div class="row">
-                <div class="col-md-4">
-                    <h3>Daily Programmer</h3>
-                    <div class="card card-block">
-                        <h4 class="card-title">#1</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                    <div class="card card-block">
-                        <h4 class="card-title">#2</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                    <div class="card card-block">
-                        <h4 class="card-title">#3</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <h3>Learn Python</h3>
-                    <div class="card card-block">
-                        <h4 class="card-title">#1</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                    <div class="card card-block">
-                        <h4 class="card-title">#2</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                    <div class="card card-block">
-                        <h4 class="card-title">#3</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <h3>Python</h3>
-                    <div class="card card-block">
-                        <h4 class="card-title">#3</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                    <div class="card card-block">
-                        <h4 class="card-title">#2</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                </div>
+                <articles-card :data="python.data" :title="python.title"></articles-card>
+                <articles-card :data="dailyProgrammer.data" :title="dailyProgrammer.title"></articles-card>
+                <articles-card :data="learnPython.data" :title="learnPython.title"></articles-card>
             </div>
         </div>
         <script src="{{ url_for('static', filename='node_modules/vue/dist/vue.js') }}"></script>
         <script src="{{ url_for('static', filename='node_modules/vue-resource/dist/vue-resource.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/components.js') }}"></script>
         <script src="{{ url_for('static', filename='js/app.js') }}"></script>
     </body>
 </html>
