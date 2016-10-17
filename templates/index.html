@@ -16,9 +16,19 @@
         </nav>
         <div class="container" id="app">
             <div class="row">
-                <articles-card :data="python.data" :title="python.title"></articles-card>
-                <articles-card :data="dailyProgrammer.data" :title="dailyProgrammer.title"></articles-card>
-                <articles-card :data="learnPython.data" :title="learnPython.title"></articles-card>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" v-model="type" v-on:keyup.enter="getData">
+                            <span class="input-group-btn">
+                                <button class="btn btn-success" v-on:click="getData">Get top 10 posts!</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <articles-card :data="subreddit"></articles-card>
             </div>
         </div>
         <script src="{{ url_for('static', filename='node_modules/vue/dist/vue.js') }}"></script>
